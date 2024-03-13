@@ -1,6 +1,7 @@
 """Moduł do połączenia z bazą dancyh."""
 
 import pypyodbc as odbc
+import bl_connect
 
 
 class DataBaseConnect:
@@ -12,6 +13,9 @@ class DataBaseConnect:
         Server=f"{SERVER}",
         Database=f"{DATABASE}",
     )
+
+    def __init__(self):
+        self.last_order_id = None
 
     def get_last_order_id(self) -> 'str':
         """
@@ -25,7 +29,6 @@ class DataBaseConnect:
             last_order = str(row[0])
 
         cursor.close()
-        print(last_order)
         return last_order
 
     def set_last_order_id(self, last_order_id: 'str'):
@@ -39,7 +42,6 @@ class DataBaseConnect:
         cursor.close()
 
 
-# connect = DataBaseConnect()
+connect = DataBaseConnect()
 # connect.get_last_order_id()
 # connect.set_last_order_id("12")
-# connect.get_last_order_id()
