@@ -17,7 +17,7 @@ class DataBaseConnect:
     def __init__(self):
         self.last_order_id = None
 
-    def get_last_order_id(self) -> 'str':
+    def get_last_order_id(self) -> str:
         """
         Metoda pobierająca ostatni numer zamówienia z bazy danych
         -> string
@@ -31,7 +31,7 @@ class DataBaseConnect:
         cursor.close()
         return last_order
 
-    def set_last_order_id(self, last_order_id: 'str'):
+    def set_last_order_id(self, last_order_id: str):
         """
         Metoda ustawiająca ostatni numer zamówienia w bazie danych
         """
@@ -42,6 +42,10 @@ class DataBaseConnect:
         cursor.close()
 
 
-connect = DataBaseConnect()
+
+
+
+
+# connect = DataBaseConnect()
 # connect.get_last_order_id()
 # connect.set_last_order_id("12")
