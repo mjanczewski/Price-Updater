@@ -1,7 +1,7 @@
 """Moduł do połączenia z bazą dancyh."""
 
 import pypyodbc as odbc
-import bl_connect
+import baselinker_connect
 
 
 class DataBaseConnect:
